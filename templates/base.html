@@ -34,7 +34,17 @@
                     </a>
             </div>
               </div>
-
+            {% if current_user.is_authenticated %}
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-light" href="{{ url_for('auth.logout') }}">
+                            Log Out
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% else %}
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
@@ -47,6 +57,7 @@
                     </div>
                 </div>
             </div>
+            {% endif %}
         </nav>
         </div>
 

@@ -39,5 +39,5 @@ def index():
 @main.route('/profile') # profile page that you get after logging in
 @login_required
 def profile():
-	return render_template('profile.html', name=current_user.name, tables=[table_ren.to_html(classes='data')], titles=table_ren.columns.values)
+	return render_template('profile.html', name=current_user.name, tables=[table_ren.to_html(classes='data')], titles=["na"])
 
