@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="columns">
+	<div class="column is-1">
+		<aside class="menu">
+		  <p class="menu-label">
+		    General
+		  </p>
+		  <ul class="menu-list">
+		    <li><a>Dashboard</a></li>
+		    <li><a>Issues</a></li>
+		  </ul>
+		  <p class="menu-label">
+		    Visulation
+		  </p>
+		  <ul class="menu-list">
+		    <li><a>Date</a></li>
+		    <li>
+		        <li><a>Blocked</a></li>
+		</aside>
+	</div>
+	<div class="column">
+		<h1 class="title">
+  			Welcome, {{ name }}!
+  			
+  			{% for table in tables %}
+            	{{titles[loop.index]}}
+            	{{ table|safe }}
+			{% endfor %}
+		</h1>
+	 </div>
+
+
+</div>
+{% endblock %}
